@@ -10,8 +10,10 @@
    
 3. Refer the **Environment Details** tab for any other lab credentials/details.
 
-4. You may encounter a popup entitled **Welcome to Microsoft Azure** with buttons for **Start Tour** and **Maybe Later** - Choose **Maybe Later**.
+4. There will be a pop-up entitled **Stay signed in**? with buttons for **No** and **Yes** - Choose **No**.
 
-5. You are provided with a pre-created **Hyperscale (Citus) database**.
+5. You may encounter a popup entitled **Welcome to Microsoft Azure** with buttons for **Start Tour** and **Maybe Later** - Choose **Maybe Later**.
 
-6. Click **Next** on the bottom right of this page.
+6. You are provided with a pre-created **Hyperscale (Citus) database**.
+
+7. Click **Next** on the bottom right of this page.
