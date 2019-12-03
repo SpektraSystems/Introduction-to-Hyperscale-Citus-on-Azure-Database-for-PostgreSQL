@@ -11,3 +11,4 @@ The Hyperscale (Citus) on Azure Database for PostgreSQL is worry-free Postgres t
 Every cluster has one special node called the coordinator (the others are known as workers). Applications send their queries to the coordinator node which relays it to the relevant workers and accumulates the results.
 For each query, the coordinator either routes it to a single worker node, or parallelizes it across several depending on whether the required data lives on a single node or multiple. Below are some scenarios on how Hyperscale (Citus) distributes your queries across multiple workers.
 
+![](Images/architecture.png)
