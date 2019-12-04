@@ -10,7 +10,7 @@
    
 3. Refer the **Environment Details** tab for any other lab credentials/details.
 
-4. There will be a pop-up entitled **Stay signed in**? with buttons for **No** and **Yes** - Choose **No**.
+4. There will be a pop-up entitled **Stay signed in?** with buttons for **No** and **Yes** - Choose **No**.
 
 5. You may encounter a popup entitled **Welcome to Microsoft Azure** with buttons for **Start Tour** and **Maybe Later** - Choose **Maybe Later**.
 
