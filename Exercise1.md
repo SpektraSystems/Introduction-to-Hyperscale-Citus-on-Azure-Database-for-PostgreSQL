@@ -46,15 +46,15 @@ Follow these steps to understand the process of creating a **PostgreSQL Hypersca
 
   ![](Images/postgresql1.png)
 
-8. This is the Azure Portal overview blade which allows you to manage your Hyperscale (Citus) server group. On this overview tab you will see in the upper right the coordinator name which you will use to connect to the Server Group. 
+8. This is the Azure Portal overview blade which allows you to manage your Hyperscale (Citus) server group. On this overview tab you will see in the upper right the **coordinator name** which you will use to connect to the Server Group. 
 
   ![](Images/postoverview.png)
 
-9. On the left click on Connection Strings to see a number of connection string formats.
+9. On the left click on **Connection Strings** to see a number of connection string formats.
 
   ![](Images/postconnstr.png)
 
-10.Then click on Configure to see your deployment configuration.
+10.Then click on **Configure** to see your deployment configuration.
 
   ![](Images/postconfig.png)
 
