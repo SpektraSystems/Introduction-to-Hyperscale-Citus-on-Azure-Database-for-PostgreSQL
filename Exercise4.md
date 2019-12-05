@@ -22,11 +22,10 @@ psql "host=srv131057.postgres.database.azure.com port=5432 dbname=citus user=cit
 
 5. When asked for password, enter **Password.1!!** and press **enter**.
 
-6. When you will get connected to your database server it will reflect as shown below:
+6. Now you will get connected to **Citus** database server.
 
   ![](Images/quey1.png)
   
-Now you are connected to **Citus** database server.
 
 ### Create and scale out tables
 
