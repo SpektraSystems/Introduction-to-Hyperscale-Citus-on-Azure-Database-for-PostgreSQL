@@ -20,7 +20,7 @@
 * File Share - name for storage accound should be unique, **fs131507**
 Then click **Create**.
 
-  ![](Images/createstorage.png)
+ ![](Images/createstorage.png)
   
  > **Note**: This may take up to a minute to create and start the Cloud Shell.
    
