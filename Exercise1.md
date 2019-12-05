@@ -2,7 +2,7 @@
 
 These instructions will instruct you on how to create a Hyperscale (Citus) server group using the Azure portal. Normally this takes about 10 minutes, however in the interest of time we have pre-created this for you. The following click steps will take you through the process so you know how simple and easy it is but at the end we will just use the one already created.
 
-### Lab 1: Create a Hyperscale (Citus) on Azure Database for PostgreSQL
+## Lab 1: Create a Hyperscale (Citus) on Azure Database for PostgreSQL
 
 Follow these steps to understand the process of creating a **PostgreSQL Hyperscale (Citus)** server group using the Azure portal:
 
