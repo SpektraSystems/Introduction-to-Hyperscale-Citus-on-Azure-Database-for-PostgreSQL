@@ -1,6 +1,6 @@
 # Getting started with Hyperscale (Citus)
 
-### Lab 2: Create a Cloud Shell
+## Lab 2: Create a Cloud Shell
 
 1. On the portal banner click on the **Cloud Shell icon **.
 
