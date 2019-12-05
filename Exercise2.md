@@ -4,7 +4,7 @@ In order to use the Azure Portal Cloud Shell to connect to the Hyperscale (Citus
 
 ## Lab 2: Create a Cloud Shell
 
-1. On the portal banner click on the **Cloud Shell icon **.
+1. On the portal banner click on the **Cloud Shell icon**.
 
   ![](Images/cloudshellicon.png)
 
