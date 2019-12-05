@@ -31,7 +31,7 @@ command and press return then copy or note the IP address of your cloud shell.
 curl -s https://ifconfig.co 
 ```
 
-   ![](Images/curlip.png)
+    ![](Images/curlip.png)
 
 > **Note: To paste in the bash console right click and choose paste.**
 
