@@ -20,25 +20,25 @@ Follow these steps to understand the process of creating a **PostgreSQL Hypersca
 
 4. Fill out the new server details form with the following information:
 
-*	Subscription: will be defaulted to your session's subscription
-*	Resource group: From the dropdown select **citus-xxxx** that is your existing resource group.
-*	Server group name: Enter **postgresxxxx**, you can copy from the environment details tab.
-* Admin username: currently required to be the value - **citus** 
-* Password: Enter **Password.1!!** and same for **Confirm Password**.
-* Location: Select location of your resource group. 
-* Compute + Storage: Click Configure server group. Leave the settings in that section unchanged and click **Save**.
+*	**Subscription**: will be defaulted to your session's subscription
+*	**Resource group**: From the dropdown select **citus-xxxx** that is your existing resource group.
+*	**Server group name**: Enter **postgresxxxx**, you can copy from the environment details tab.
+* **Admin username**: currently required to be the value - **citus** 
+* **Password**: Enter **Password.1!!** and same for **Confirm Password**.
+* **Location**: Select location of your resource group. 
+* **Compute + Storage**: Click **Configure server group**. Leave the settings in that section unchanged and click **Save**.
 
   ![](Images/configurations.png)
 
 > **Note**: When creating Hyperscale(Citus) deployments you are able to horizontally scale the number of worker nodes up to 20 nodes. If you need more than 20 nodes, just create a support ticket and we will enable that for you. You will be able to set up/down (vcores, storage) on all workers as well as the coordinator. RAM is a function of number of cores and type of server (controller or worker).
 
-5. Click Review + create to see a summary. At this point DO NOT click Create as we have already created it for you to save time.
+5. Click **Review + create** to see a summary. At this point **DO NOT click Create** as we have already created it for you to save time.
 
   ![](Images/reviewconfig.png)
 
 > **Note**: If you clicked create, it would take up to 10 minutes to deploy. You would be redirected to a page that monitors the deployment while you wait.
 
-6. Now in the upper left of the Azure Portal click Home. Then under Azure services click **Azure Database for PostgreSQL servers**. 
+6. Now in the upper left of the Azure Portal click **Home**. Then under Azure services click **Azure Database for PostgreSQL servers**. 
 
   ![](Images/postgresql.png)
 
