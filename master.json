@@ -1,0 +1,36 @@
+[
+  {
+    "Name": "Introduction to Hyperscale(Citus) on Azure Database for PostgreSQL",
+    "Language": "English",
+    "Files": [
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/SpektraSystems/Introduction-to-Hyperscale-Citus-on-Azure-Database-for-PostgreSQL/master/README.md",
+        "Order": 0
+      },
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/SpektraSystems/Introduction-to-Hyperscale-Citus-on-Azure-Database-for-PostgreSQL/master/Getting%20Started.md",
+        "Order": 1
+      },
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/SpektraSystems/Introduction-to-Hyperscale-Citus-on-Azure-Database-for-PostgreSQL/master/Exercise1.md",
+        "Order": 2
+      },
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/SpektraSystems/Introduction-to-Hyperscale-Citus-on-Azure-Database-for-PostgreSQL/master/Exercise2.md",
+        "Order": 3
+      },
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/SpektraSystems/Introduction-to-Hyperscale-Citus-on-Azure-Database-for-PostgreSQL/master/Exercise3.md",
+        "Order": 4
+      },
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/SpektraSystems/Introduction-to-Hyperscale-Citus-on-Azure-Database-for-PostgreSQL/master/Exercise4.md",
+        "Order": 5
+      },
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/SpektraSystems/Introduction-to-Hyperscale-Citus-on-Azure-Database-for-PostgreSQL/master/Conclusions.md",
+        "Order": 6
+      }
+    ]
+  }
+]
