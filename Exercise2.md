@@ -22,7 +22,7 @@ Then click **Create**.
 
  ![](Images/createstorage.png)
   
- > **Note**: This may take up to a minute to create and start the Cloud Shell.
+ > **Note: This may take up to a minute to create and start the Cloud Shell.**
    
 8. We will need the client IP address of Cloud Shell to configure the firewall in the next step. At the command prompt enter the following 
 command and press return then copy or note the IP address of your cloud shell.
