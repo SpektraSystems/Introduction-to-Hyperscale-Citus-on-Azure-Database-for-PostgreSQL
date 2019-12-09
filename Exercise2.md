@@ -20,6 +20,7 @@ In order to use the Azure Portal Cloud Shell to connect to the Hyperscale (Citus
 * **Resource Group** - Select **Use Existing** that is **citus-xxxx**
 * **Storage Account** - name for storage accound should be unique, as in **sa131507**
 * **File Share** - name for storage accound should be unique, as in **fs131507**
+
 Then click **Create**.
 
  ![](Images/createstorage.png)
