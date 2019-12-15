@@ -86,12 +86,13 @@ SELECT create_distributed_table('github_users', 'user_id');
 
   ![](Images/query4.png)
   
-For each table this command creates shards on the worker nodes. Each shard is a simple postgresql table that holds a set of users (as we sharded on user_id). It also creates metadata on the coordinator node to keep track of set of distributed tables and locality of shards on workers. As we sharded both the tables on user_id the tables are automatically colocated. This means that all the data related to a single user_id for both tables is on the same worker node. This helps when performing joins between the 2 tables locally on the worker nodes across the colocated shards.
+This command splits each specified table into a series of shards on the worker nodes. Each shard is a simple postgresql table that holds a set of users (as we sharded on user_id). It also creates metadata on the coordinator node to keep track of set of distributed tables and locality of shards on workers. As we sharded both the tables on user_id the tables are automatically colocated. This means that all the data related to a single user_id for both tables is on the same worker node. This helps when performing joins between the 2 tables locally on the worker nodes across the colocated shards.
 
 > **Note**: Within Hyperscale (Citus) servers there are three types of tables
-•	**Distributed Tables** - distributed across worker nodes (scaled out). Generally large tables should be distributed tables to improve performance.
-•	**Reference tables** - Replicated to all nodes. Enables joins with distributed tables. Typically used for small tables like countries or product categories.
-•	**Local tables** - tables that reside on coordinator node, administration tables are good examples of local tables.
+
+-	**Distributed Tables** - distributed across worker nodes (scaled out). Generally large tables should be distributed tables to improve performance.
+-	**Reference tables** - Replicated to all nodes. Enables joins with distributed tables. Typically used for small tables like countries or product categories.
+-	**Local tables** - tables that reside on coordinator node, administration tables are good examples of local tables.
 We're ready to load data. The following commands will "shell" out to the Bash Cloud Shell and download the files.
 
 6. In the bash console copy and paste the following and press Enter. This will download the data files.
@@ -110,9 +111,9 @@ We're ready to load data. The following commands will "shell" out to the Bash Cl
 \copy github_users from 'users.csv' WITH CSV 
 ```
 
-    ![](Images/query6.png)
+   ![](Images/query6.png)
     
-For heavy production workloads where the COPY command is faster in Hyperscale (Citus) than single node postgres because COPY fans out and runs in parallel across the worker nodes.
+For heavy production workloads, the COPY command is faster in Hyperscale (Citus) than single node postgres because COPY fans out and runs in parallel across the worker nodes.
 
 ### Run queries
 
@@ -126,7 +127,8 @@ SELECT count(*) from github_events;
 
   ![](Images/query7.png)
   
-This simple query was refactored based on the shard key user_id you created early by the controller to all of the workers and returned the aggregate record count. 
+The coordinator automatically refactored this query using the shard key of user_id that you specified earlier. This allowed it to run the count locally on each shard of the table, add up the results, and give you a very fast response.
+
 Within the JSONB payload column there's a good bit of data, but it varies based on event type. PushEvent events contain a size that includes the number of distinct commits for the push. We can use it to find the total number of commits per hour.
 
 9. In the bash console copy and paste the following to see the number of commits by hour
@@ -155,7 +157,7 @@ ORDER BY minute;
     
 > **Note**: If you are stuck in the results view, type q and press Enter to quit view mode
 
-So far the queries have involved the github_events exclusively, but we can combine this information with github_users. Since we sharded both users and events on the same identifier (user_id), the rows of both tables with matching user IDs will be co-located on the same database nodes and can easily be joined. If we join our query on user_id, the Hyperscale (Citus) controller will push the join execution down into shards for execution in parallel on worker nodes.
+So far the queries have involved the github_events table exclusively, but we can combine this information with github_users. Since we sharded both users and events on the same identifier (user_id), the rows of both tables with matching user IDs will be co-located on the same database nodes and can easily be joined. If we join our query on user_id, the Hyperscale (Citus) controller will push the join execution down into shards for execution in parallel on worker nodes.
 
 10.	In the bash console copy and paste the following to find the users who created the greatest number of repositories
 
