@@ -3,7 +3,7 @@
 When you create your Hyperscale (Citus) a default database named citus is created. To connect to your database server, you need a connection string and the admin password. Initial connections may take up to 2 minutes. 
 If for any reason your shell times out and you restart it you will need to perform the curl -s https://ifconfig.co command again and ensure the firewall is updated with the new IP address.
 
-## Lab 4: Connect to the database using PSQL
+## **Lab 4: Connect to the database using PSQL**
 
 1. Click the **Maximize square** in the upper right of the Cloud Shell click to make it full screen.
 
