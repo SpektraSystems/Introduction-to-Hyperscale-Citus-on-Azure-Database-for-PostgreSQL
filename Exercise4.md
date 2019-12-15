@@ -5,35 +5,35 @@ If for any reason your shell times out and you restart it you will need to perfo
 
 ## **Lab 4: Connect to the database using PSQL**
 
-1. Click the **Maximize square** in the upper right of the Cloud Shell click to make it full screen.
+1.Click the **Maximize square** in the upper right of the Cloud Shell click to make it full screen.
 
-2. At the bash prompt, connect to your Azure Database for PostgreSQL server with the PSQL utility. Copy and paste the following command in a text editor.
+2.At the bash prompt, connect to your Azure Database for PostgreSQL server with the PSQL utility. Copy and paste the following command in a text editor.
 
 ```
 psql "host=srvxxx.postgres.database.azure.com port=5432 dbname=citus user=citus sslmode=require" 
 ```
 
-3. Replace **host** with - Go to Azure Database for PostgreSQL server,open your **postgrexxxx** server,then from the top-right corner copy **Coordinator Name** or **PostgreSQL Database hostname** given in **environment details** tab.
+3.Replace **host** with - Go to Azure Database for PostgreSQL server,open your **postgrexxxx** server,then from the top-right corner copy **Coordinator Name** or **PostgreSQL Database hostname** given in **environment details** tab.
 
-4. The final command should look similar to the one shown below. Paste the command in bash console and press **enter**.
+4.The final command should look similar to the one shown below. Paste the command in bash console and press **enter**.
 ```
 psql "host=srv131057.postgres.database.azure.com port=5432 dbname=citus user=citus sslmode=require"
 ```
 
-5. When asked for password, enter **Password.1!!** and press **enter**.
+5.When asked for password, enter **Password.1!!** and press **enter**.
 
-6. Now you will get connected to **Citus** database server.
+6.Now you will get connected to **Citus** database server.
 
   ![](Images/quey1.png)
   
 
-### Create and scale out tables
+### **Create and scale out tables**
 
 Once connected to the Hyperscale (Citus) coordinator node using PSQL, you can complete some basic tasks.
 
 In this experience, we'll primarily focus on distributed tables and getting familiar with them. The data model we're going to work with is simple: user and event data from GitHub. Events include fork creation, git commits related to an organization, and more.
 
-7. In the bash console copy and paste the following to create the tables. Then press Enter.
+7.In the bash console copy and paste the following to create the tables. Then press Enter.
 
 ```
 CREATE TABLE github_events 
@@ -66,7 +66,7 @@ The payload field of github_events has a JSONB datatype. JSONB is the JSON datat
 
 Let's go ahead and create a couple of indexes before we load our data. 
 
-4. In the bash console copy and paste the following to create the indexes and press Enter.
+8.In the bash console copy and paste the following to create the indexes and press Enter.
 
 ```
 CREATE INDEX event_type_index ON github_events (event_type); 
@@ -77,7 +77,7 @@ CREATE INDEX payload_index ON github_events USING GIN (payload jsonb_path_ops);
 
 Next we’ll take those Postgres tables on the coordinator node and tell Hyperscale (Citus) to shard them across the workers. To do so, we’ll run a query for each table specifying the key to shard it on. In the current example we’ll shard both the events and users table on user_id.
 
-5. In the bash console copy and paste the following and press Enter.
+9.In the bash console copy and paste the following and press Enter.
 
 ```
 SELECT create_distributed_table('github_events', 'user_id');
@@ -95,7 +95,7 @@ This command splits each specified table into a series of shards on the worker n
 -	**Local tables** - tables that reside on coordinator node, administration tables are good examples of local tables.
 We're ready to load data. The following commands will "shell" out to the Bash Cloud Shell and download the files.
 
-6. In the bash console copy and paste the following and press Enter. This will download the data files.
+10.In the bash console copy and paste the following and press Enter. This will download the data files.
 
 ```
 \! curl -O https://examples.citusdata.com/users.csv
@@ -104,7 +104,7 @@ We're ready to load data. The following commands will "shell" out to the Bash Cl
 
   ![](Images/query5.png)
   
-7. In the bash console copy and paste the following to load the data files.
+11.In the bash console copy and paste the following to load the data files.
 
 ```
 \copy github_events from 'events.csv' WITH CSV 
@@ -115,11 +115,11 @@ We're ready to load data. The following commands will "shell" out to the Bash Cl
     
 For heavy production workloads, the COPY command is faster in Hyperscale (Citus) than single node postgres because COPY fans out and runs in parallel across the worker nodes.
 
-### Run queries
+### **Run queries**
 
 Now it's time for the fun part, actually running some queries. Let's start with a simple count (*) to see how much data we loaded.
 
-8. In the bash console copy and paste the following to get a record count of github_events
+12.In the bash console copy and paste the following to get a record count of github_events
 
 ```
 SELECT count(*) from github_events; 
@@ -131,7 +131,7 @@ The coordinator automatically refactored this query using the shard key of user_
 
 Within the JSONB payload column there's a good bit of data, but it varies based on event type. PushEvent events contain a size that includes the number of distinct commits for the push. We can use it to find the total number of commits per hour.
 
-9. In the bash console copy and paste the following to see the number of commits by hour
+13.In the bash console copy and paste the following to see the number of commits by hour
 
 ```
 SELECT date_trunc('hour', created_at) AS hour, 
@@ -159,7 +159,7 @@ ORDER BY minute;
 
 So far the queries have involved the github_events table exclusively, but we can combine this information with github_users. Since we sharded both users and events on the same identifier (user_id), the rows of both tables with matching user IDs will be co-located on the same database nodes and can easily be joined. If we join our query on user_id, the Hyperscale (Citus) controller will push the join execution down into shards for execution in parallel on worker nodes.
 
-10.	In the bash console copy and paste the following to find the users who created the greatest number of repositories
+14.In the bash console copy and paste the following to find the users who created the greatest number of repositories
 
 ```
 SELECT login, count(*) 
@@ -177,4 +177,4 @@ In production workloads the above queries are fast on Hyperscale (Citus) for the
 *	Shards are small, indexes are small. This helps in better resource utilization and better index/cache hit rates.
 *	Parallelism across multiple worker node.
 
-11. Click **Next** on the bottom right of this page.
+15.Click **Next** on the bottom right of this page.
