@@ -20,13 +20,13 @@ Follow these steps to understand the process of creating a **PostgreSQL Hypersca
 
 4. Fill out the new server details form with the following information:
 
-*	**Subscription**: will be defaulted to your session's subscription
-*	**Resource group**: From the dropdown select **citus-xxxx** that is your existing resource group.
-*	**Server group name**: Enter **postgresxxxx**, you can copy from the environment details tab.
-* **Admin username**: currently required to be the value - **citus** 
-* **Password**: Enter **Password.1!!** and same for **Confirm Password**.
-* **Location**: Select location of your resource group. 
-* **Compute + Storage**: Click **Configure server group**. Leave the settings in that section unchanged and click **Save**.
+- **Subscription**: will be defaulted to your session's subscription
+- **Resource group**: From the dropdown select **citus-xxxx** that is your existing resource group.
+- **Server group name**: Enter **postgresxxxx**, you can copy from the environment details tab.
+- **Admin username**: currently required to be the value - **citus** 
+- **Password**: Enter **Password.1!!** and same for **Confirm Password**.
+- **Location**: Select location of your resource group. 
+- **Compute + Storage**: Click **Configure server group**. Leave the settings in that section unchanged and click **Save**.
 
   ![](Images/configurations.png)
 
