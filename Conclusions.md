@@ -7,6 +7,6 @@ In this lab you’ve learned how to scale out Postgres horizontally on Microsoft
 More specifically you learned how to -
 *	Provision a Hyperscale (Citus) server group on Azure Database for PostgreSQL
 *	Create an Azure Cloud Shell
-*	Connect to your Hyperscale (Citus) server using Psql
+*	Connect to your Hyperscale (Citus) server using PSQL
 *	Create a schema, define the sharding key, and load the data into the server group
 
