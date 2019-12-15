@@ -143,17 +143,6 @@ ORDER BY hour;
 ```
 
   ![](Images/query8.png)
-  
-Per minute
-
-```
-SELECT date_trunc('minute', created_at) AS minute,
-       sum((payload->>'distinct_size')::int) AS num_commits
-FROM github_events
-WHERE event_type = 'PushEvent'
-GROUP BY minute
-ORDER BY minute;
-```
     
 > **Note**: If you are stuck in the results view, type q and press Enter to quit view mode
 
