@@ -2,7 +2,7 @@
 
 In order to use the Azure Portal Cloud Shell to connect to the Hyperscale (Citus) server group we will need to create a storage account. The storage account allows you to save files associated with the Cloud Shell so you may use them in various Azure portal activities like running scripts, downloading data files and managing Azure resources.
 
-## Lab 2: Create a Cloud Shell
+## **Lab 2: Create a Cloud Shell**
 
 1. On the portal banner click on the **Cloud Shell icon**.
 
