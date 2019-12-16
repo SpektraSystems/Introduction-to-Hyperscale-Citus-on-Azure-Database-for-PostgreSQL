@@ -19,8 +19,8 @@ In order to use the Azure Portal Cloud Shell to connect to the Hyperscale (Citus
 4.Use the default values for subscription and region and for:
 
 - **Resource Group** - Select **Use Existing** that is **citus-xxxx**
-- **Storage Account** - name for storage accound should be unique, as in **sa131507**
-- **File Share** - name for storage accound should be unique, as in **fs131507**
+- **Storage Account** - Use **<inject key="GEN-UNIQUE-8"></inject>** as **Storage Account Name**
+- **File Share** - Use **<inject key="GEN-UNIQUE-7"></inject>** as **File Share**
 
 Then click **Create Storage**.
 
