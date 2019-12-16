@@ -5,7 +5,7 @@ If for any reason your shell times out and you restart it you will need to perfo
 
 ## **Lab 4: Connect to the database using PSQL**
 
-1.Now in the upper left of the Azure Portal click **Home**. Then under Azure services click **Azure Database for PostgreSQL servers**. 
+1.Navigate to **Home** in Azure Portal. Then under Azure services click **Azure Database for PostgreSQL servers**. 
 
   ![](Images/postgresql.png)
 
@@ -20,7 +20,7 @@ If for any reason your shell times out and you restart it you will need to perfo
 4.Replace **{your_password}** with **Password123**. The final connection string should look similar to the one shown below. 
 
 ```
-psql "host=srv135800.postgres.database.azure.com port=5432 dbname=citus user=citus password={your_password} sslmode=require""
+psql "host=srv135800.postgres.database.azure.com port=5432 dbname=citus user=citus password=Password123 sslmode=require""
 ```
 
 5.Paste the connection string in bash console and press **enter**. You will get connected to **Citus** database server.
