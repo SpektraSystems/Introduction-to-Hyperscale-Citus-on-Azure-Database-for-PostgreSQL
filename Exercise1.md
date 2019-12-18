@@ -10,11 +10,11 @@ Follow these steps to understand the process of creating a **PostgreSQL Hypersca
 
    ![](Images/createresource.png)
 
-2.Under **Azure Marketplace** select **Databases** from the New page, and select **Azure Database for PostgreSQL** from the Databases    page.
+2.Under **Azure Marketplace** select **Databases** from the New page, then select **Azure Database for PostgreSQL** from the Databases    page.
 
    ![](Images/azmarketplace.png)
 
-3.On the deployment option page, click the **Create** button under Hyperscale(Citus) on Azure Database for PostgreSQL.
+3.On the deployment option page, click **Create** button under **Hyperscale(Citus) server group** on Azure Database for PostgreSQL.
 
    ![](Images/createcitus.png)
 
