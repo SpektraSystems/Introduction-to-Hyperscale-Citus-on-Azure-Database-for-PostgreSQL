@@ -14,6 +14,6 @@
 
 5.You may encounter a popup entitled **Welcome to Microsoft Azure** with buttons for **Start Tour** and **Maybe Later** - Choose **Maybe Later**.
 
-6.You are provided with a pre-created **Hyperscale (Citus) database**.
+6.You are provided with a pre-created **Hyperscale(Citus) database**.
 
 7.Click **Next** on the bottom right of this page.
