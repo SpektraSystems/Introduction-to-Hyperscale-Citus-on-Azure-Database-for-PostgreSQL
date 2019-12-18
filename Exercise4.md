@@ -175,8 +175,6 @@ ORDER BY count(*) DESC LIMIT 20;
 
   ![](Images/query9.png)
     
-In production workloads the above queries are fast on Hyperscale (Citus) for the following reasons.
-*	Shards are small, indexes are small. This helps in better resource utilization and better index/cache hit rates.
-*	Parallelism across multiple worker node.
+Several of the capabilities and design decisions shown above are well suited to production workloads on Hyperscale (Citus) environments. By keeping shards and their indexes small, we are able to increase index and cache hit rates, aiding resource utilization. By having a series of worker nodes sharing the load, we are able to greatly increase parallelism as well, allowing for significant performance gains.  
 
 14.Click **Next** on the bottom right of this page.
