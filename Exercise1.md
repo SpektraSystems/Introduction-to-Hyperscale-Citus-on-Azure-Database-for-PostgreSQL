@@ -1,10 +1,10 @@
-# Getting started with Hyperscale (Citus) extension for PostgreSQL
+# Getting started with Hyperscale(Citus) extension for PostgreSQL
 
-These instructions will instruct you on how to create a Hyperscale (Citus) server group using the Azure portal. Normally this takes about 10 minutes, however in the interest of time we have pre-created this for you. The following steps will take you through the process so you know how simple and easy it is but at the end we will just use the one already created.
+These instructions will instruct you on how to create a Hyperscale(Citus) server group using the Azure portal. Normally this takes about 10 minutes, however in the interest of time we have pre-created this for you. The following steps will take you through the process so you know how simple and easy it is but at the end we will just use the one already created.
 
-## **Lab 1: Create a Hyperscale (Citus) on Azure Database for PostgreSQL**
+## **Lab 1: Create a Hyperscale(Citus) on Azure Database for PostgreSQL**
 
-Follow these steps to understand the process of creating a **PostgreSQL Hyperscale (Citus)** server group using the Azure portal:
+Follow these steps to understand the process of creating a **PostgreSQL Hyperscale(Citus)** server group using the Azure portal:
 
 1.Click **+ Create a resource** in the upper left-hand corner of the Azure portal.
 
@@ -46,7 +46,7 @@ Follow these steps to understand the process of creating a **PostgreSQL Hypersca
 
   ![](Images/postgresql1.png)
 
-8.This is the Azure Portal overview blade which allows you to manage your Hyperscale (Citus) server group. On this overview tab you will see in the upper right the **coordinator name** which you will use to connect to the Server Group. 
+8.This is the Azure Portal overview blade which allows you to manage your Hyperscale(Citus) server group. On this overview tab you will see in the upper right the **coordinator name** which you will use to connect to the Server Group. 
 
   ![](Images/postoverview.png)
 
