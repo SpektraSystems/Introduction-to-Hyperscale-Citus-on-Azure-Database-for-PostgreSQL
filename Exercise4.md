@@ -71,6 +71,9 @@ Let's go ahead and create a couple of indexes before we load our data.
 
 ```
 CREATE INDEX event_type_index ON github_events (event_type); 
+```
+
+```
 CREATE INDEX payload_index ON github_events USING GIN (payload jsonb_path_ops); 
 ```
 
@@ -82,6 +85,9 @@ Next we’ll take those Postgres tables on the coordinator node and tell Hypersc
 
 ```
 SELECT create_distributed_table('github_events', 'user_id');
+```
+
+```
 SELECT create_distributed_table('github_users', 'user_id');
 ```
 
@@ -100,6 +106,9 @@ We're ready to load data. The following commands will "shell" out to the Bash Cl
 
 ```
 \! curl -O https://examples.citusdata.com/users.csv
+```
+
+```
 \! curl -O https://examples.citusdata.com/events.csv 
 ```
 
@@ -109,6 +118,9 @@ We're ready to load data. The following commands will "shell" out to the Bash Cl
 
 ```
 \copy github_events from 'events.csv' WITH CSV 
+```
+
+```
 \copy github_users from 'users.csv' WITH CSV 
 ```
 
