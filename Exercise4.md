@@ -14,7 +14,7 @@ If for any reason your shell times out and you restart it you will need to perfo
 
   ![](Images/postgresql1.png)
 
-3.Select **Connection Strings** under **Security** pane. Then copy the connection string given under **psql** and paste it in a text editor.
+3.Select **Connection Strings** under **Settings** pane. Then copy the connection string given under **psql** and paste it in a text editor.
 
   ![](Images/connstr1.png)
 

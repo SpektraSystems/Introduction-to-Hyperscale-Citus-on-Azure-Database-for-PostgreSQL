@@ -6,7 +6,7 @@
 
 2.Use the azure credentials provided in the **Environment Details** tab to log in to the portal.
 
-   ![](Images/environmentdetails.png)
+   ![](Images/environmentdetails1.png)
    
 3.Refer the **Environment Details** tab for any other lab credentials/details.
 
