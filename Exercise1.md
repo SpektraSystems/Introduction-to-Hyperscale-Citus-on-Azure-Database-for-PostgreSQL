@@ -23,12 +23,13 @@ Follow these steps to understand the process of creating a **PostgreSQL Hypersca
 - **Subscription**: will be defaulted to your session's subscription
 - **Resource group**: From the dropdown select **citus-xxxx** that is your existing resource group.
 - **Server group name**: Enter **postgresxxxx**, you can copy from the environment details tab.
-- **Admin username**: currently required to be the value - **citus** 
-- **Password**: Enter **Password.1!!** and same for **Confirm Password**.
 - **Location**: Select location of your resource group. 
 - **Compute + Storage**: Click **Configure server group**. Leave the settings in that section unchanged and click **Save**.
+- **PostgreSQl version**: Leave Dafault 
+- **Admin username**: currently required to be the value - **citus** 
+- **Password**: Enter **Password.1!!** and same for **Confirm Password**.
 
-  ![](Images/configurations.png)
+  ![](Images/configurations1.png)
 
 > **Note**: When creating Hyperscale(Citus) deployments you are able to horizontally scale the number of worker nodes up to 20 nodes. If you need more than 20 nodes, just create a support ticket and we will enable that for you. You will be able to set up/down (vcores, storage) on all workers as well as the coordinator. RAM is a function of number of cores and type of server (controller or worker).
 
@@ -52,11 +53,11 @@ Follow these steps to understand the process of creating a **PostgreSQL Hypersca
 
 9.On the left click on **Connection Strings** to see a number of connection string formats.
 
-  ![](Images/postconnstr.png)
+  ![](Images/postconnstrng.png)
 
-10.Then click on **Configure** to see your deployment configuration.
+10.Then click on **Compute+Storage** to see your deployment configuration.
 
-  ![](Images/postconfig.png)
+  ![](Images/postconfig1.png)
 
 11.Click **Next** on the bottom right of this page.
 
